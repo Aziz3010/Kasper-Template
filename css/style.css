@@ -1,5 +1,393 @@
+/* Start General Rules */
+:root{
+    --mainColor:#19c8fa;
+    --transparentColor: rgba(15,116,143,.7)
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+}
+
+ul{
+    list-style: none;
+}
+
+/* End General Rules */
+
+/* Start Header */
+
+header{
+    padding: .5rem 0rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .container::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #a2a2a2;
+    bottom: 0;
+    width: calc(100% - 30px);
+}
+
+/* nav ul & li & a */
+
+header .container nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex:1;
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+header .container nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: .9rem;
+    transition: 500ms;
+    padding: 1.5rem .8rem;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    z-index: 2;
+}
+
+header .container nav ul li .actv,
+header .container nav ul li a:hover{
+    color: var(--mainColor);
+    border-bottom: 2px solid var(--mainColor);
+}
+
+/* nav form */
+
+header .container nav .form{
+    width: 3rem;
+    height: 1.875rem;
+    margin-left: 2rem;
+    border-left: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+nav .form i{
+    color: white;
+    transition: 500ms;
+}
+
+nav .form:hover i{
+    color: var(--mainColor);
+}
+
+.searchBox{
+    width: 30%;
+    display: none;
+    position: absolute;
+    background-color: var(--transparentColor);
+    padding: 1rem;
+    bottom: -4.2rem;
+    z-index: 1000;
+}
+
+/* menu button */
+
+.menuBox{
+    border: 2px solid var(--transparentColor);
+    height: 100%;
+    padding: .7rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menuBox div{
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 3px;
+}
+
+.menuBox div:last-child{
+    margin-bottom: 0px;
+}
+
+/* Start header media */
+
+@media screen and (max-width:767px){
+    header .container{
+        padding: 1rem 0rem;
+    }
+    header .container::after{
+        width: 100%;
+    }
+    .menuBox{
+        display: flex;
+    }
+
+    header .container nav{
+        margin-top: 1rem;
+        flex-direction: row;
+        text-align: center;
+        border: none;
+        position: relative;
+    }
+
+    header .container nav ul{
+        display: none;
+        background-color: #3a3a3a;
+        margin-top: 1.2rem;
+        position: absolute;
+        top: 100%;
+        width: 75%;
+        border-radius: 10px;
+        z-index: 600;
+    }
+
+    header .container nav ul li a,
+    header .container nav ul li a:hover,
+    header .container nav ul li .actv{
+        border: none;
+    }
+
+    header .container nav ul li:first-child,
+    header .container nav ul li:first-child a{
+        border-radius: 10px 10px 0 0;
+    }
+    header .container nav ul li:last-child,
+    header .container nav ul li:last-child a{
+
+        border-radius: 0 0 10px 10px;
+    }
+
+    .searchBox{
+        margin-bottom: -1.2rem;
+        width: 75%;
+        z-index: 1000;
+    }    
+}
+
+@media screen and (max-width:572px) {
+    header .container{
+        padding: 1rem;
+    }
+    header .container::after{
+        width: calc(100% - 2rem);
+    }
+}
+
+@media screen and (max-width:280px){
+    header .container{
+        flex-direction: column;
+    }
+    header .container nav{
+        margin-top: 1rem;
+        flex-direction: column;
+        text-align: center;
+        border: none;
+    }
+    header .container nav ul{
+        width: 150px;
+    }
+    
+    header .container nav ul li a,
+    header .container nav ul li a:hover,
+    header .container nav ul li .actv{
+        border: none;
+    }
+    header .container .logo-side img{
+        height: 41px;
+    }
+    header .container nav .form{
+        margin: .5rem 0 0 0;
+    }
+
+    .searchBox{
+        width: 200px;
+        z-index: 1000;
+    }
+}
+
+@media screen and (max-width:200px) {
+    .searchBox{
+        width: 150px;
+        z-index: 1000;
+    }
+    header .container nav ul{
+        width: 140px;
+    }
+}
+
+@media screen and (max-width:149px) {
+    .searchBox{
+        width: 100px;
+        z-index: 1000;
+    }
+}
+
+/* End header media */
+
+/* End Header */
+
+
+/* Start Landing */
+
+.landing{
+    background-color: var(--transparentColor);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.landing .overlay{
+    position: absolute;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-inner{
+    height: 100vh;
+}
+
+.carousel-item img{
+    height: 100vh;
+    width: 100vw;
+}
+
+.carousel-caption{
+    position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateY(-75%);
+    width: 484px;
+    z-index: 1;
+    padding: 2rem 3rem 3rem 5rem;
+    color: #fff;
+    text-align: left;
+    background-color: var(--transparentColor);
+}
+
+.carousel-caption h5{
+    color: white;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.carousel-caption p{
+    font-size: 13px;
+}
+
+@media screen and (max-width:500px){
+    .carousel-caption{
+        width: 250px;
+    }
+
+    .carousel-caption h5{
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    
+    .carousel-caption p{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:260px){
+    .carousel-caption{
+        display: none;
+    }
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Landing */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
