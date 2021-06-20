@@ -14,7 +14,6 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: #333;
 }
 
 ul{
@@ -22,6 +21,53 @@ ul{
 }
 
 /* End General Rules */
+
+/* Start component */
+
+.main-heading{
+    text-align: center;
+}
+.main-heading h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.main-heading h2::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #333;
+}
+
+.main-heading h2::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.main-heading p{
+    width: 550px;
+    margin: 0rem auto 5rem;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+
+/* End component */
 
 /* Start Header */
 
@@ -211,7 +257,6 @@ nav .form:hover i{
     }
     header .container nav{
         margin-top: 1rem;
-        flex-direction: column;
         text-align: center;
         border: none;
     }
@@ -228,10 +273,11 @@ nav .form:hover i{
         height: 41px;
     }
     header .container nav .form{
-        margin: .5rem 0 0 0;
+        margin: 0rem 0rem 0rem .5rem;
     }
 
     .searchBox{
+        left: -48px;
         width: 200px;
         z-index: 1000;
     }
@@ -286,7 +332,7 @@ nav .form:hover i{
 
 .carousel-item img{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .carousel-caption{
@@ -316,7 +362,7 @@ nav .form:hover i{
 @media screen and (max-width:500px){
     .carousel-caption{
         width: 250px;
-        padding: 1rem .5rem 1rem 2rem;
+        padding: 1rem .5rem 1rem 2.5rem;
     }
 
     .carousel-caption h5{
@@ -331,7 +377,8 @@ nav .form:hover i{
 
 @media screen and (max-width:260px){
     .carousel-caption{
-        display: none;
+    border-radius: 0px;
+    width: 100%;
     }
 }
 
@@ -341,55 +388,133 @@ nav .form:hover i{
     border-radius: 50%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* End Landing */
 
+/* Start services */
+#Services .Services-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.Services-box i{
+    margin-right: .6rem;
+}
+
+.Services-box .text{
+    padding-left: 1rem;
+}
+
+.Services-box .text h3{
+    color: var(--mainColor);
+}
+
+.Services-box .text p{
+    line-height: 2;
+    color: #777;
+}
+
+@media screen and (max-width:576px) {
+    #Services .Services-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Services-box i{
+        margin-bottom: .5rem;
+    }
+    .Services-box .text{
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* End services */
+
+/* Start designs */
+
+#designs{
+    position: relative;
+    background-color: var(--transparentColor);
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 600px;
+}
+
+.designs-image-side{
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    flex: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+.designs-image-side img{
+    position: relative;
+    bottom: -12rem;
+}
+
+.designs-text-side{
+    background-color: var(--transparentColor);
+    color: #fff;
+    padding: 3rem;
+    position: relative;
+    flex: 1;
+    z-index: 2;
+    min-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.designs-text-side h3{
+    text-transform: uppercase;
+}
+
+.icons-text{
+    margin-top: 2rem;
+}
+
+.icons-text li{
+    margin-bottom: 1rem;
+}
+
+.icons-text li:last-child{
+    margin-bottom: 0rem;
+}
+
+.icons-text i{
+    margin-right: 1rem;
+}
+
+#designs .layout{
+    background-color: rgba(0,0,0,.6);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width:860px) {
+    .designs-image-side{
+        display: none;
+    }
+}
+
+/* End designs */
+/* Start Portfolio */
 
 
+/* End Portfolio */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* vidoe 10 */
 
 
