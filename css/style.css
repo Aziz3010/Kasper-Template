@@ -512,9 +512,253 @@ nav .form:hover i{
 /* End designs */
 /* Start Portfolio */
 
+#Portfolio .head-of-tabs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.head-of-tabs .tab{
+    background-color: #e9e9e9;
+    margin-right: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.head-of-tabs .tab:last-child{
+    margin-right: 0rem;
+}
+
+.head-of-tabs .tab h6{
+    margin: 0;
+    color: #000;
+    font-weight: 600;
+}
+
+#Portfolio .head-of-tabs .actv{
+    background-color: #00c7fc;
+}
+.head-of-tabs .actv h6{
+    color: white;
+}
+
+.head-of-tabs .tab:hover{
+    background-color: #00c7fc;
+}
+
+.head-of-tabs .tab:hover.tab h6 {
+    color: white;
+}
+
+@media screen and (max-width:400px) {
+    #Portfolio .head-of-tabs{
+        width: 300px;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    
+    .head-of-tabs .tab{
+        margin-right: .4rem;
+        margin-bottom: .4rem;
+        padding: .3rem .7rem;
+    }    
+
+}
+
+@media screen and (max-width:322px) {
+    #Portfolio .head-of-tabs{
+        width: 200px;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    
+    .head-of-tabs .tab{
+        margin-right: .4rem;
+        margin-bottom: .4rem;
+        padding: .2rem .6rem;
+    }    
+}
+
+
+.designs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.designs .item{
+    width: calc(100%/4);
+    padding: .1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.designs .item .image{
+    overflow: hidden;
+}
+
+.designs .item .image img{
+    transition: transform 500ms;
+    width: 100%;
+}
+
+.designs .item .image img:hover{
+    transform: rotate(2deg) scale(1.1,1.1);
+}
+
+.designs .item .caption{
+    background-color: #f9f9f9;
+    transition: bottom 800ms;
+    padding: .5rem 1.5rem;
+    position: absolute;
+    bottom: -50%;
+    right: 0;
+    left: 0;
+}
+
+.item .caption p{
+    margin: 5px 0;
+}
+
+.item .caption h6{
+    color: var(--mainColor);
+}
+
+.designs .item:hover.item .caption{
+    bottom: 0%;
+}
+
+@media screen and (max-width:767px) {
+    .designs .item{
+        width: calc(100%/2);
+    }
+}
+
+@media screen and (max-width:400px) {
+    .designs .item{
+        width: 100%;
+    }
+}
 
 /* End Portfolio */
 
-/* vidoe 10 */
+/* Start video */
+
+#video{
+    position: relative;
+}
+
+#video::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#video video{
+    width: 100%; 
+}
+
+#video .text{
+    color: #fff;
+    background-color: var(--transparentColor);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+@media screen and (max-width:468px) {
+    #video .text {
+        padding: 20px !important;
+    }
+    #video .text h2{
+        font-size: medium !important;
+        margin-bottom: 5px;
+    }
+    #video .text p{
+        font-size: small;
+        margin-bottom: 2px;
+    }
+    #video .text button{
+        padding: 10px;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width:320px) {
+    #video .text {
+        padding: 5px !important;
+    }
+    #video .text h2{
+        font-size: small !important;
+        margin-bottom: 5px;
+    }
+    #video .text p{
+        font-size: smaller;
+        margin-bottom: 2px;
+    }
+    #video .text button{
+        padding: 5px;
+        font-size: x-small;
+    }
+}
+
+/* End video */
+
+/* Start About */
+
+#About{
+    padding-bottom: 0 !important;
+    overflow: hidden;
+}
+
+#About img{
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    #About img{
+        bottom: -70px;
+        margin-top: -70px;
+    }   
+}
+
+@media screen and (max-width:400px) {
+    #About img{
+        bottom: -60px;
+        margin-top: -60px;
+    }   
+}
+
+/* End About */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+search
+aspect-ratio */
