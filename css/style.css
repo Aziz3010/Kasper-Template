@@ -746,10 +746,107 @@ nav .form:hover i{
 /* End About */
 
 
+/* Start dashboard */
+
+#dashboard {
+    background-color: var(--transparentColor);
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+#dashboard::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    z-index: -1;
+}
+
+
+#dashboard  .container .item{
+    background-color: var(--transparentColor);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+#dashboard .dash-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#dashboard .item i{
+    color: #fff;
+}
+
+#dashboard .item p{
+    margin: 0;
+    color: #fff;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+#dashboard .item :nth-child(2){
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#dashboard .item p:last-child{
+    margin-bottom: 0rem;
+}
+
+
+@media screen and (max-width:991px) {
+    #dashboard  .container .item{
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    
+    #dashboard  .container .item:last-child {
+        font-size: 12px;
+    }
+    #dashboard .item :nth-child(2){
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+}
+
+@media screen and (max-width:575px) {
+    #dashboard  .container .item{
+        width: 75%;
+        margin: auto;
+        margin-bottom: 1rem !important;
+    }
+    
+    #dashboard .item :nth-child(2){
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+/* End dashboard */
+/* Start TESTIMONIALS & SKILLS */
 
 
 
 
+
+/* End TESTIMONIALS & SKILLS */
 
 
 
