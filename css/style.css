@@ -1078,7 +1078,22 @@ nav .form:hover i{
     right: 0;
 }
 
-@media screen and (max-width:1000px){
+
+@media screen and (max-width:991px){
+    #testimonials .container{
+        flex-direction: column;
+    }
+
+    #testimonials .container .col-lg-6{
+        margin-bottom: 4rem;
+    }
+
+    #testimonials .container:last-child{
+        margin-bottom: 0rem;
+    }
+}
+
+@media screen and (max-width:767px){
     #testimonials .container{
         flex-direction: column;
     }
