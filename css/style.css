@@ -1122,16 +1122,59 @@ nav .form:hover i{
 
 /* End TESTIMONIALS & SKILLS */
 
+/* Start quote */
+.quote{
+    background-color: var(--transparentColor);
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.quote::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: -1;
+}
+
+.quote p{
+    margin-bottom: 1.5rem;
+}
+
+.quote span{
+    font-size: 1rem;
+}
+
+@media screen and (max-width:576px) {
+    .quote p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:412px) {
+    .quote p{
+        font-size: .7rem;
+    }
+    .quote span{
+        font-size: .7rem;
+    }}
+
+
+/* End quote */
+
+/* Start Pricing */
 
 
 
 
-
-
-
-
-
-
+/* End Pricing */
 
 
 
