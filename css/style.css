@@ -1171,8 +1171,158 @@ nav .form:hover i{
 
 /* Start Pricing */
 
+#pricing .prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices .price{
+    background-color: #fcfcfc;
+    width: calc(100% / 4) ;
+    margin: 0 .8rem;
+}
+
+.prices .price .top{
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.price .top span{
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 2.8rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.price .top span::before{
+    content: "$";
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 600;
+    top: 0;
+    left: -10px;
+}
+
+.price .top span::after{
+    content: "/Day";
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 600;
+    bottom: 0%;
+    right: -43px;
+}
 
 
+.prices .price .meddile{
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.price .meddile ul{
+    text-align: center;
+    margin: 0;
+}
+
+.price .meddile ul li{
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.price .meddile ul li::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mainColor);
+}
+
+.price .meddile ul li:last-child::after {
+    height: 0px;
+}
+
+.prices .price .bottom{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.prices .price .bottom a{
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--mainColor);
+    cursor: pointer;    
+    transition: background-color 500ms , color 500ms;
+}
+
+.price .bottom a:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--mainColor);
+}
+
+#pricing .text{
+    padding: 1rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+#pricing .text p{
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+#pricing .text .button{
+    text-align: center;
+}
+
+#pricing .text .button a{
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--mainColor);
+    cursor: pointer;    
+    transition: background-color 500ms , color 500ms;
+}
+
+#pricing .text .button a:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--mainColor);
+}
+
+@media screen and (max-width:767px) {
+    #pricing .prices{
+        flex-wrap: wrap;
+    }
+
+    .prices .price{
+        width: calc(100%/2 - 20px);
+        margin: 0 10px;
+        margin-bottom: 1rem;
+    }
+
+    .prices .price .top{
+        background-color: #f5f5f5;
+    }
+}
+
+@media screen and (max-width:380px) {    
+    .prices .price{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .prices .price .top{
+        background-color: #f5f5f5;
+    }
+}
 
 /* End Pricing */
 
