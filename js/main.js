@@ -17,8 +17,3 @@ $(".menuBox").click(function(){
     }
 });
 // ===== End Header ===== //
-
-
-
-
-
