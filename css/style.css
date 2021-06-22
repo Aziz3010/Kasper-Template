@@ -1326,6 +1326,117 @@ nav .form:hover i{
 
 /* End Pricing */
 
+/* Start contact-input */
+
+.contact-input{
+    background-color: var(--transparentColor);
+    background-image: url(../images/subscribe.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 6rem 0;
+}
+
+.contact-input .inputBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    border: 1px solid var(--mainColor);
+}
+
+.contact-input .inputBox i{
+    padding-right: .8rem;
+    color: #fff;
+}
+
+.contact-input .inputBox input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 3.5rem;
+    color: #fff;
+    caret-color: var(--mainColor);
+}
+
+::placeholder{
+    color: #fff;
+}
+
+.inputBox input:focus{
+    outline: none;
+    border: none;
+}
+
+.contact-input .inputBox .button{
+    text-align: center;
+}
+
+.inputBox .button a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    padding: 1rem 1rem;
+    background-color: var(--mainColor);
+    cursor: pointer;    
+    transition: background-color 500ms ;
+    color: #fff;
+}
+
+.inputBox .button a:hover{
+    background-color: var(--transparentColor);
+}
+
+
+.contact-input .textP{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-input .textP p{
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media screen and (max-width:767px) {
+    .contact-input .textP{
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width:475px) {
+    .contact-input .textP p{
+    font-size: .8rem;
+    font-weight: 400;
+    }
+}
+@media screen and (max-width:270px) {
+    .contact-input .textP p{
+    font-size: .5rem;
+    font-weight: 400;
+    }
+}
+
+/* End contact-input */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
