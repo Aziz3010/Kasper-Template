@@ -1341,7 +1341,7 @@ nav .form:hover i{
     justify-content: center;
     align-items: center;
     padding-left: 1rem;
-    border: 1px solid var(--mainColor);
+    border: 1px solid #fff;
 }
 
 .contact-input .inputBox i{
@@ -1359,7 +1359,7 @@ nav .form:hover i{
     caret-color: var(--mainColor);
 }
 
-::placeholder{
+.inputBox input::placeholder{
     color: #fff;
 }
 
@@ -1386,7 +1386,6 @@ nav .form:hover i{
 .inputBox .button a:hover{
     background-color: var(--transparentColor);
 }
-
 
 .contact-input .textP{
     height: 3.5rem;
@@ -1421,6 +1420,121 @@ nav .form:hover i{
 
 /* End contact-input */
 
+#Contact .form-box{
+    padding: 0 2rem;
+}
+
+#Contact .form-box .inputs-style{
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    margin-bottom: 1.5rem;
+}
+
+#Contact .form-box textarea.inputs-style{
+    resize: none;
+    height: 120px;
+}
+
+#Contact .form-box .btn-style{
+    display: flex;
+    margin-left: auto;
+}
+
+#Contact .button{
+    display: flex;
+}
+
+#Contact .button a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    padding: 1rem 1rem;
+    background-color: var(--mainColor);
+    cursor: pointer;    
+    transition: background-color 500ms ;
+    color: #fff;
+    margin-left: auto;
+}
+
+#Contact .button a:hover{
+    background-color: var(--transparentColor);
+}
+
+#Contact .text{
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Contact .text .top{
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+#Contact .text .top h4{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#Contact .text .top p{
+    color: #777;
+    margin: 0;
+}
+
+#Contact .text .botton{
+    text-align: center;
+    width: 100%;
+}
+
+#Contact .text .botton h4{
+    font-weight: 600;
+}
+
+#Contact .text .botton address{
+    color: #777;
+}
+
+@media screen and (max-width:767px) {
+    
+    #Contact .col-md-4{
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Start Footer */
+
+footer{
+    background-color: var(--transparentColor);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+footer .content{
+    background-color: cyan;
+    text-align: center;
+}
+
+footer .content img{
+    background-color: #333;    
+}
+
+.content h3{
+    background-color: darkblue;
+    margin: 2rem 0;
+    padding: 0 .8rem 1rem .8rem;
+    border-bottom: 1px solid #fff;
+}
 
 
 
@@ -1435,13 +1549,7 @@ nav .form:hover i{
 
 
 
-
-
-
-
-
-
-
+/* End Footer */
 
 /* 
 search
